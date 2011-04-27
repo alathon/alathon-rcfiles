@@ -1,0 +1,18 @@
+Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 100
+       , lowerOnStart = True
+       , commands = [ Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Battery ["-L", "50", "-H", "75", "--high", "green", "--normal", "yellow", "--low", "red", "--template", "bat: <left>"] 100
+                    , Run Cpu ["-L","15","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Com "/home/alathon/.xmobarscripts/vol.sh" [] "vol" 30
+                    , Run Com "/home/alathon/.xmobarscripts/wifi.sh" [] "wifi" 30
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %cpu% %memory% %battery% | %wifi% | %vol% | %date%"
+       }

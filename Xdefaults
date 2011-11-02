@@ -1,0 +1,9 @@
+URxvt*termName: rxvt-256color
+URxvt*urgentOnBell: true
+URxvt*foreground:Green
+URxvt*background:Black
+URxvt*color4:RoyalBlue
+URxvt*color12:RoyalBlue
+URxvt*scrollBar_right:true
+URxvt*scrollstyle:rxvt
+URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=13

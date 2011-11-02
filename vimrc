@@ -22,6 +22,16 @@ set foldclose=all
 set t_vb=
 set cmdheight=2
 nnoremap <F2> :set invpaste paste?<CR>
+nnoremap <F3> :call ToggleMouse()<CR>
+function! ToggleMouse()
+	if &mouse == 'a'
+		set mouse=
+		echo "Mouse usage DISABLED"
+	else
+		set mouse=a
+		echo "Mouse usage ENABLED"
+	endif
+endfunction
 map Y y$
 set nocompatible
 set iskeyword+=:
